@@ -1,25 +1,42 @@
 <NotepadPlus>
-    <InternalCommands />
+    <InternalCommands>
+        <Shortcut id="50000" Ctrl="no" Alt="no" Shift="no" Key="0" />
+        <Shortcut id="50001" Ctrl="no" Alt="no" Shift="no" Key="0" />
+    </InternalCommands>
     <Macros>
-        <Macro name="Trim Trailing and save" Ctrl="no" Alt="yes" Shift="yes" Key="83">
-            <Action type="1" message="2170" wParam="0" lParam="0" sParam=" " />
-            <Action type="1" message="2170" wParam="0" lParam="0" sParam=" " />
-            <Action type="1" message="2170" wParam="0" lParam="0" sParam=" " />
-            <Action type="0" message="2327" wParam="0" lParam="0" sParam="" />
-            <Action type="0" message="2327" wParam="0" lParam="0" sParam="" />
+        <Macro name="Trim trailing spaces and save file" Ctrl="no" Alt="yes" Shift="yes" Key="83">
             <Action type="2" message="0" wParam="42024" lParam="0" sParam="" />
             <Action type="2" message="0" wParam="41006" lParam="0" sParam="" />
         </Macro>
+        <Macro name="E-mail quoting" Ctrl="no" Alt="no" Shift="no" Key="0">
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam="&gt;" />
+            <Action type="1" message="2170" wParam="0" lParam="0" sParam=" " />
+            <Action type="0" message="2300" wParam="0" lParam="0" sParam="" />
+            <Action type="0" message="2345" wParam="0" lParam="0" sParam="" />
+        </Macro>
     </Macros>
     <UserDefinedCommands>
-        <Command name="launch in Firefox" Ctrl="yes" Alt="yes" Shift="yes" Key="88">firefox &quot;$(FULL_CURRENT_PATH)&quot;</Command>
-        <Command name="launch in IE" Ctrl="yes" Alt="yes" Shift="yes" Key="73">iexplore &quot;$(FULL_CURRENT_PATH)&quot;</Command>
-        <Command name="Get php help" Ctrl="no" Alt="yes" Shift="no" Key="112">http://www.php.net/%20$(CURRENT_WORD)</Command>
         <Command name="Google Search" Ctrl="no" Alt="yes" Shift="no" Key="113">http://www.google.com/search?q=$(CURRENT_WORD)</Command>
         <Command name="Wikipedia Search" Ctrl="no" Alt="yes" Shift="no" Key="114">http://en.wikipedia.org/wiki/Special:Search?search=$(CURRENT_WORD)</Command>
         <Command name="open file" Ctrl="no" Alt="yes" Shift="no" Key="116">$(NPP_DIRECTORY)\notepad++.exe $(CURRENT_WORD)</Command>
         <Command name="open in another instance" Ctrl="no" Alt="yes" Shift="no" Key="117">$(NPP_DIRECTORY)\notepad++.exe $(CURRENT_WORD) -nosession -multiInst</Command>
     </UserDefinedCommands>
-    <PluginCommands />
-    <ScintillaKeys />
+    <PluginCommands>
+        <PluginCommand moduleName="Obide.dll" internalID="4" Ctrl="yes" Alt="no" Shift="no" Key="189" />
+    </PluginCommands>
+    <ScintillaKeys>
+        <ScintKey ScintID="2177" menuCmdID="42001" Ctrl="yes" Alt="no" Shift="no" Key="88" />
+        <ScintKey ScintID="2345" menuCmdID="0" Ctrl="no" Alt="no" Shift="no" Key="36" />
+        <ScintKey ScintID="2331" menuCmdID="0" Ctrl="no" Alt="yes" Shift="no" Key="36" />
+        <ScintKey ScintID="2314" menuCmdID="0" Ctrl="no" Alt="yes" Shift="no" Key="35" />
+        <ScintKey ScintID="2347" menuCmdID="0" Ctrl="no" Alt="no" Shift="no" Key="35" />
+        <ScintKey ScintID="2432" menuCmdID="0" Ctrl="no" Alt="yes" Shift="yes" Key="35" />
+        <ScintKey ScintID="2315" menuCmdID="0" Ctrl="no" Alt="no" Shift="no" Key="0" />
+        <ScintKey ScintID="2332" menuCmdID="0" Ctrl="no" Alt="yes" Shift="yes" Key="36" />
+        <ScintKey ScintID="2431" menuCmdID="0" Ctrl="no" Alt="no" Shift="no" Key="0" />
+        <ScintKey ScintID="2338" menuCmdID="0" Ctrl="yes" Alt="no" Shift="no" Key="89" />
+        <ScintKey ScintID="2011" menuCmdID="42004" Ctrl="yes" Alt="no" Shift="yes" Key="90" />
+        <ScintKey ScintID="2348" menuCmdID="0" Ctrl="no" Alt="no" Shift="yes" Key="35" />
+        <ScintKey ScintID="2346" menuCmdID="0" Ctrl="no" Alt="no" Shift="yes" Key="36" />
+    </ScintillaKeys>
 </NotepadPlus>

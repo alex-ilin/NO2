@@ -1,0 +1,325 @@
+<FunctionList>
+    <Language name="C++" imagelistpath="">
+        <CommList param1="//" param2="" />
+        <CommList param1="/\*" param2="\*/" />
+        <CommList param1='\&quot;' param2='\&quot;' />
+        <Group name="INCLUDE" subgroup="" icon="4" child="0" autoexp="0" matchcase="0" fendtobbeg="" bbegtobend="">
+            <Rules regexbeg="#include[ \t]+" regexfunc='[a-zA-Z0-9_./&lt;&gt;\&quot;]+' regexend="" bodybegin="" bodyend="$" sep="" />
+        </Group>
+        <Group name="CLASS" subgroup="" icon="1" child="11" autoexp="0" matchcase="0" fendtobbeg="" bbegtobend="">
+            <Rules regexbeg="^[ \t]*class[ \t]+" regexfunc="[a-zA-Z0-9_]+" regexend="" bodybegin="\{" bodyend="\}" sep="" />
+        </Group>
+        <Group name="METHOD" subgroup="" icon="9" child="16" autoexp="4" matchcase="0" fendtobbeg="" bbegtobend="">
+            <Rules regexbeg="[ \t]*[a-zA-Z0-9_]+[ \t]+" regexfunc="[a-zA-Z0-9_]+[ \t]*::[ \t]*[a-zA-Z0-9_]+" regexend="[ \t]*\(.*\)" bodybegin="\{" bodyend="\}" sep=";" />
+        </Group>
+        <Group name="FUNCTION" subgroup="CLASS" icon="9" child="17" autoexp="4" matchcase="0" fendtobbeg="" bbegtobend="">
+            <Rules regexbeg="[ \t]*[a-zA-Z0-9_]+[ \t]+" regexfunc="[a-zA-Z0-9_]+" regexend="[ \t]*\(.*\)" bodybegin="\{" bodyend="\}" sep=";" />
+        </Group>
+        <Group name="STRUCT" subgroup="" icon="6" child="13" autoexp="0" matchcase="0" fendtobbeg="" bbegtobend="">
+            <Rules regexbeg="struct[ \t]+" regexfunc="[a-zA-Z0-9_]+" regexend="" bodybegin="{" bodyend="}.*;" sep=";" />
+        </Group>
+        <Group name="ENUM" subgroup="" icon="5" child="14" autoexp="0" matchcase="0" fendtobbeg="" bbegtobend="">
+            <Rules regexbeg="enum[ \t]+" regexfunc="[a-zA-Z0-9_]+" regexend="" bodybegin="\{" bodyend="\}.*;" sep=";" />
+        </Group>
+        <Group name="UNION" subgroup="" icon="8" child="10" autoexp="0" matchcase="0" fendtobbeg="" bbegtobend="">
+            <Rules regexbeg="union[ \t]+" regexfunc="[a-zA-Z0-9_]+" regexend="" bodybegin="\{" bodyend="\}.*;" sep=";" />
+        </Group>
+        <Group name="DEFINE" subgroup="" icon="3" child="3" autoexp="0" matchcase="0" fendtobbeg="" bbegtobend="">
+            <Rules regexbeg="#define[ \t]+" regexfunc="[a-zA-Z0-9_]+" regexend="" bodybegin="" bodyend="$" sep="" />
+        </Group>
+        <Group name="IF" subgroup="" icon="3" child="3" autoexp="0" matchcase="0" fendtobbeg="" bbegtobend="">
+            <Rules regexbeg="#if[def]*[ \t]+" regexfunc="[a-zA-Z0-9_]+" regexend="" bodybegin="" bodyend="#endif" sep="" />
+        </Group>
+    </Language>
+    <Language name="Process Config" imagelistpath="">
+        <CommList param1="#" param2="" />
+        <Group name="DEFINITION" subgroup="" icon="0" child="0" autoexp="4" matchcase="1" fendtobbeg="" bbegtobend="">
+            <Rules regexbeg="[ \t]*!BEGIN_DEFINITION[ \t]+!UNIT[ \t]+" regexfunc="[a-zA-Z0-9_]+" regexend="[ \t]+!.*" bodybegin="" bodyend="[ \t]*!END_DEFINITION" sep="" />
+        </Group>
+        <Group name="MODULE" subgroup="DEFINITION" icon="0" child="0" autoexp="0" matchcase="1" fendtobbeg="" bbegtobend="">
+            <Rules regexbeg="^[ \t]*" regexfunc="[a-zA-Z0-9_/-]+" regexend="[ \t]+!VERSION.*$" bodybegin="" bodyend="[ \t]*!END_OPTION" sep="" />
+        </Group>
+    </Language>
+    <Language name="rc resource file" imagelistpath="">
+        <CommList param1="//" param2="" />
+        <CommList param1="/\*" param2="\*/" />
+        <CommList param1='[^\\]&quot;' param2='[^\\]&quot;' />
+        <Group name="DIALOG" subgroup="" icon="0" child="0" autoexp="0" matchcase="1" fendtobbeg="" bbegtobend="\&lt;BEGIN\&gt;">
+            <Rules regexbeg="^[\s/]*" regexfunc="\w+" regexend="\s+DIALOG" bodybegin="\&lt;BEGIN\&gt;" bodyend="\&lt;END\&gt;" sep="" />
+        </Group>
+        <Group name="VERSIONINFO" subgroup="" icon="0" child="0" autoexp="0" matchcase="1" fendtobbeg="" bbegtobend="\&lt;BEGIN\&gt;">
+            <Rules regexbeg="^[\s/]*" regexfunc="\w+" regexend="\s+VERSIONINFO" bodybegin="\&lt;BEGIN\&gt;" bodyend="\&lt;END\&gt;" sep="" />
+        </Group>
+        <Group name="MENU" subgroup="" icon="0" child="0" autoexp="0" matchcase="1" fendtobbeg="" bbegtobend="\&lt;BEGIN\&gt;">
+            <Rules regexbeg="^[\s/]*" regexfunc="\w+" regexend="\s+MENU" bodybegin="\&lt;BEGIN\&gt;" bodyend="\&lt;END\&gt;" sep="" />
+        </Group>
+    </Language>
+    <Language name="C" imagelistpath="">
+        <CommList param1="//" param2="" />
+        <CommList param1="/\*" param2="\*/" />
+        <CommList param1='\&quot;' param2='\&quot;' />
+        <Group name="INCLUDE" subgroup="" icon="4" child="0" autoexp="0" matchcase="0" fendtobbeg="" bbegtobend="">
+            <Rules regexbeg="#include[ \t]+" regexfunc='[a-zA-Z0-9_./&lt;&gt;\&quot;]+' regexend="" bodybegin="" bodyend="$" sep="" />
+        </Group>
+        <Group name="FUNCTION" subgroup="" icon="9" child="17" autoexp="0" matchcase="0" fendtobbeg="" bbegtobend="">
+            <Rules regexbeg="[ \t]*[a-zA-Z0-9_]+[ \t]+" regexfunc="[a-zA-Z0-9_]+" regexend="[ \t]*\(.*\)" bodybegin="\{" bodyend="\}" sep=";" />
+        </Group>
+        <Group name="STRUCT" subgroup="" icon="6" child="14" autoexp="0" matchcase="0" fendtobbeg="" bbegtobend="">
+            <Rules regexbeg="struct[ \t]+" regexfunc="[a-zA-Z0-9_]+" regexend="" bodybegin="{" bodyend="}.*;" sep=";" />
+        </Group>
+        <Group name="ENUM" subgroup="" icon="5" child="13" autoexp="0" matchcase="0" fendtobbeg="" bbegtobend="">
+            <Rules regexbeg="enum[ \t]+" regexfunc="[a-zA-Z0-9_]+" regexend="" bodybegin="\{" bodyend="\}.*;" sep=";" />
+        </Group>
+        <Group name="UNION" subgroup="" icon="8" child="10" autoexp="0" matchcase="0" fendtobbeg="" bbegtobend="">
+            <Rules regexbeg="union[ \t]+" regexfunc="[a-zA-Z0-9_]+" regexend="" bodybegin="\{" bodyend="\}.*;" sep=";" />
+        </Group>
+        <Group name="DEFINE" subgroup="" icon="3" child="3" autoexp="0" matchcase="0" fendtobbeg="" bbegtobend="">
+            <Rules regexbeg="#define[ \t]+" regexfunc="[a-zA-Z0-9_]+" regexend="" bodybegin="" bodyend="$" sep="" />
+        </Group>
+        <Group name="IF" subgroup="" icon="3" child="3" autoexp="0" matchcase="0" fendtobbeg="" bbegtobend="">
+            <Rules regexbeg="#if[def]*[ \t]+" regexfunc="[a-zA-Z0-9_]+" regexend="" bodybegin="" bodyend="#endif" sep="" />
+        </Group>
+    </Language>
+    <Language name="C#" imagelistpath="">
+        <CommList param1="//" param2="" />
+        <CommList param1="/\*" param2="\*/" />
+        <CommList param1='\&quot;' param2='\&quot;' />
+        <Group name="FUNCTION" subgroup="" icon="0" child="0" autoexp="0" matchcase="1" fendtobbeg="" bbegtobend="\{">
+            <Rules regexbeg="\&lt;" regexfunc="~*[\w_]+" regexend="\s*\(\w\s_\.&lt;&gt;\[\],]*\)" bodybegin="\{" bodyend="\}" sep="" />
+        </Group>
+    </Language>
+    <Language name="Java" imagelistpath="">
+        <CommList param1="//" param2="" />
+        <CommList param1="/\*" param2="\*/" />
+        <CommList param1='\&quot;' param2='\&quot;' />
+        <Group name="FUNCTION" subgroup="" icon="0" child="0" autoexp="0" matchcase="1" fendtobbeg="" bbegtobend="\{">
+            <Rules regexbeg="\&lt;" regexfunc="~*[\w_]+" regexend="\s*\(\w\s_\.&lt;&gt;\[\],]*\)" bodybegin="\{" bodyend="\}" sep="" />
+        </Group>
+    </Language>
+    <Language name="HTML" imagelistpath="">
+        <CommList param1="#" param2="" />
+        <CommList param1="//" param2="" />
+        <CommList param1="/\*" param2="\*/" />
+        <Group name="FUNCTION" subgroup="" icon="0" child="0" autoexp="0" matchcase="1" fendtobbeg="" bbegtobend="\{">
+            <Rules regexbeg="function[\s&amp;]+" regexfunc='[&quot;\w_]+' regexend="\s*\(.*\)" bodybegin="\{" bodyend="\}" sep=";" />
+            <Rules regexbeg="^\s*" regexfunc='[&quot;\w_.]+' regexend="\s*[=:]\s*function\s*\([\w_$&amp;=&apos;,\s]*\)" bodybegin="\{" bodyend="\}" sep=";" />
+            <Rules regexbeg="^\s*var\s*" regexfunc='[&quot;\w_.]+' regexend="\s*[=:]\s*function\s*\([\w_$&amp;=&apos;,\s]*\)" bodybegin="\{" bodyend="\}" sep=";" />
+        </Group>
+    </Language>
+    <Language name="Flash actionscript" imagelistpath="">
+        <CommList param1="#" param2="" />
+        <CommList param1="//" param2="" />
+        <CommList param1="/\*" param2="\*/" />
+        <Group name="FUNCTION" subgroup="" icon="0" child="0" autoexp="0" matchcase="1" fendtobbeg="" bbegtobend="\{">
+            <Rules regexbeg="function[\s&amp;]+" regexfunc='[&quot;\w_]+' regexend="\s*\([\w_:,\s]*\)" bodybegin="\{" bodyend="\}" sep=";" />
+        </Group>
+    </Language>
+    <Language name="LISP" imagelistpath="">
+        <Group name="DEFUN" subgroup="" icon="0" child="0" autoexp="0" matchcase="0" fendtobbeg="" bbegtobend="">
+            <Rules regexbeg="\s*defun\s*" regexfunc="[\w_\-:]+" regexend="" bodybegin="" bodyend="" sep="" />
+        </Group>
+    </Language>
+    <Language name="PHP" imagelistpath="">
+        <CommList param1="#" param2="" />
+        <CommList param1="//" param2="" />
+        <CommList param1="/\*" param2="\*/" />
+        <Group name="FUNCTION" subgroup="" icon="0" child="0" autoexp="0" matchcase="1" fendtobbeg="" bbegtobend="\{">
+            <Rules regexbeg="function[\s&amp;]+" regexfunc='[&quot;\w_]+' regexend="\s*\(.*\)" bodybegin="\{" bodyend="\}" sep=";" />
+        </Group>
+    </Language>
+    <Language name="ASP" imagelistpath="">
+        <CommList param1="&apos;" param2="" />
+        <CommList param1="//" param2="" />
+        <Group name="FUNCTION" subgroup="" icon="0" child="0" autoexp="0" matchcase="0" fendtobbeg="" bbegtobend="">
+            <Rules regexbeg="\&lt;function\s+" regexfunc="[\w_]+" regexend="\s*\(.*\)" bodybegin="" bodyend="\&lt;end\s+function\&gt;" sep="" />
+            <Rules regexbeg="\&lt;sub\s+" regexfunc="[\w_]+" regexend="\s*\(.*\)" bodybegin="" bodyend="\&lt;end\s+sub\&gt;" sep="" />
+        </Group>
+    </Language>
+    <Language name="Javascript" imagelistpath="">
+        <CommList param1="#" param2="" />
+        <CommList param1="//" param2="" />
+        <CommList param1="/\*" param2="\*/" />
+        <Group name="FUNCTION" subgroup="" icon="0" child="0" autoexp="0" matchcase="1" fendtobbeg="" bbegtobend="\{">
+            <Rules regexbeg="function[\s&amp;]+" regexfunc='[&quot;\w_]+' regexend="\s*\(.*\)" bodybegin="\{" bodyend="\}" sep=";" />
+            <Rules regexbeg="^\s*" regexfunc='[&quot;\w_.]+' regexend="\s*[=:]\s*function\s*\([\w_$&amp;=&apos;,\s]*\)" bodybegin="\{" bodyend="\}" sep=";" />
+            <Rules regexbeg="^\s*var\s*" regexfunc='[&quot;\w_.]+' regexend="\s*[=:]\s*function\s*\([\w_$&amp;=&apos;,\s]*\)" bodybegin="\{" bodyend="\}" sep=";" />
+        </Group>
+    </Language>
+    <Language name="Perl" imagelistpath="">
+        <CommList param1="#" param2="" />
+        <Group name="SUB" subgroup="" icon="0" child="0" autoexp="0" matchcase="1" fendtobbeg="" bbegtobend="\{">
+            <Rules regexbeg="\&lt;sub\s+" regexfunc="[\w_]+" regexend="\&gt;" bodybegin="\{" bodyend="\}" sep="" />
+        </Group>
+    </Language>
+    <Language name="Python" imagelistpath="">
+        <CommList param1="#" param2="" />
+        <Group name="DEFINE" subgroup="" icon="0" child="0" autoexp="0" matchcase="1" fendtobbeg="" bbegtobend="">
+            <Rules regexbeg="def\s+" regexfunc="[\w_]+" regexend="\s*\(.*\)\s*:" bodybegin="" bodyend="" sep="" />
+        </Group>
+    </Language>
+    <Language name="Lua" imagelistpath="">
+        <CommList param1='&quot;' param2='&quot;' />
+        <CommList param1="&apos;" param2="&apos;" />
+        <CommList param1="--" param2="" />
+        <CommList param1="--\[\[" param2="\]\]" />
+        <Group name="FUNCTION" subgroup="" icon="0" child="0" autoexp="0" matchcase="1" fendtobbeg="" bbegtobend="\&lt;do\&gt;|\&lt;if\&gt;|\&lt;function\&gt;">
+            <Rules regexbeg="^[-\s]*function\s+" regexfunc="[\w_:.]+" regexend="\s*\([\w_,.\s]*\)" bodybegin="" bodyend="\&lt;end\&gt;" sep="" />
+            <Rules regexbeg="^[-\s]*" regexfunc="[\w_:.]+" regexend="\s*=\s*function\s*\([\w_,\s]*\)" bodybegin="" bodyend="\&lt;end\&gt;" sep="" />
+            <Rules regexbeg="^" regexfunc="[\w_]+" regexend="\s*=" bodybegin="\{" bodyend="\}" sep="" />
+        </Group>
+    </Language>
+    <Language name="Fortran" imagelistpath="">
+        <CommList param1="^C" param2="" />
+        <Group name="FUNCTION" subgroup="" icon="0" child="0" autoexp="0" matchcase="0" fendtobbeg="" bbegtobend="">
+            <Rules regexbeg="\s*function\s*" regexfunc="[\w_]+" regexend="\s*\(.*\)" bodybegin="" bodyend="^\s*end" sep="" />
+            <Rules regexbeg="\s*function\s*" regexfunc="[\w_]+" regexend="\s*\(.*\)" bodybegin="" bodyend="^\s*end\s*function" sep="" />
+            <Rules regexbeg="\s*function\s*" regexfunc="[\w_]+" regexend="" bodybegin="" bodyend="^\s*end" sep="" />
+            <Rules regexbeg="\s*function\s*" regexfunc="[\w_]+" regexend="" bodybegin="" bodyend="^\s*end\s*function" sep="" />
+        </Group>
+        <Group name="SUBROUTINE" subgroup="" icon="0" child="0" autoexp="0" matchcase="0" fendtobbeg="" bbegtobend="">
+            <Rules regexbeg="\s*subroutine\s*" regexfunc="[\w_]+" regexend="\s*\(.*\)" bodybegin="" bodyend="^\s*end" sep="" />
+            <Rules regexbeg="\s*subroutine\s*" regexfunc="[\w_]+" regexend="\s*\(.*\)" bodybegin="" bodyend="^\s*end\s*subroutine" sep="" />
+            <Rules regexbeg="\s*subroutine\s*" regexfunc="[\w_]+" regexend="" bodybegin="" bodyend="^\s*end" sep="" />
+            <Rules regexbeg="\s*subroutine\s*" regexfunc="[\w_]+" regexend="" bodybegin="" bodyend="^\s*end\s*subroutine" sep="" />
+        </Group>
+        <Group name="PROGRAM" subgroup="" icon="0" child="0" autoexp="0" matchcase="0" fendtobbeg="" bbegtobend="">
+            <Rules regexbeg="\s*program\s*" regexfunc="[\w_]+" regexend="\s*\(.*\)" bodybegin="" bodyend="^\s*end" sep="" />
+            <Rules regexbeg="\s*program\s*" regexfunc="[\w_]+" regexend="\s*\(.*\)" bodybegin="" bodyend="^\s*end\s*program" sep="" />
+            <Rules regexbeg="\s*program\s*" regexfunc="[\w_]+" regexend="" bodybegin="" bodyend="^\s*end" sep="" />
+            <Rules regexbeg="\s*program\s*" regexfunc="[\w_]+" regexend="" bodybegin="" bodyend="^\s*end\s*program" sep="" />
+        </Group>
+    </Language>
+    <Language name="NSIS" imagelistpath="">
+        <CommList param1="#" param2="" />
+        <CommList param1=";" param2="" />
+        <CommList param1='&quot;' param2='&quot;' />
+        <Group name="FUNCTION" subgroup="" icon="0" child="0" autoexp="0" matchcase="1" fendtobbeg="" bbegtobend="">
+            <Rules regexbeg="^Function\&gt;.*\s+" regexfunc="[-.\w_]+$" regexend="" bodybegin="" bodyend="\&lt;FunctionEnd\&gt;" sep="" />
+            <Rules regexbeg="^Function\&gt;.*\s+" regexfunc="[-.\w_ ]+" regexend='\&quot;$' bodybegin="" bodyend="\&lt;FunctionEnd\&gt;" sep="" />
+        </Group>
+        <Group name="SECTION" subgroup="" icon="0" child="0" autoexp="0" matchcase="1" fendtobbeg="" bbegtobend="">
+            <Rules regexbeg="^Section\&gt;.*\s+" regexfunc="[-.\w_]+$" regexend="" bodybegin="" bodyend="\&lt;SectionEnd\&gt;" sep="" />
+            <Rules regexbeg="^Section\&gt;.*\s+" regexfunc="[-.\w_ ]+" regexend='\&quot;$' bodybegin="" bodyend="\&lt;SectionEnd\&gt;" sep="" />
+        </Group>
+        <Group name="SUBSECTION" subgroup="" icon="0" child="0" autoexp="0" matchcase="1" fendtobbeg="" bbegtobend="">
+            <Rules regexbeg="^SubSection\&gt;.*\s+" regexfunc="[-.\w_]+$" regexend="" bodybegin="" bodyend="\&lt;SubSectionEnd\&gt;" sep="" />
+            <Rules regexbeg="^SubSection\&gt;.*\s+" regexfunc="[-.\w_ ]+" regexend='\&quot;$' bodybegin="" bodyend="\&lt;SubSectionEnd\&gt;" sep="" />
+        </Group>
+    </Language>
+    <Language name="VHDL" imagelistpath="">
+        <CommList param1="--" param2="" />
+        <Group name="ENTITY" subgroup="" icon="0" child="0" autoexp="0" matchcase="0" fendtobbeg="\&lt;FUNCTION\&gt;|\&lt;PROCEDURE\&gt;" bbegtobend="\&lt;IF\&gt;|\&lt;COMPONENT\&gt;|\&lt;LOOP\&gt;|\&lt;CASE\&gt;|\&lt;BEGIN\&gt;">
+            <Rules regexbeg="ENTITY\s+" regexfunc="[\w_]+" regexend="\s+IS" bodybegin="" bodyend="\&lt;END\&gt;.*;" sep="" />
+        </Group>
+        <Group name="FUNCTION" subgroup="" icon="0" child="0" autoexp="0" matchcase="0" fendtobbeg="" bbegtobend="">
+            <Rules regexbeg="function\s+" regexfunc='[\w_&quot;\+-\*/]+' regexend="\s*\([\w_,;:\s\(\)]*\)" bodybegin="\&lt;BEGIN\&gt;" bodyend="\&lt;END\&gt;.*;" sep="" />
+        </Group>
+        <Group name="PROCEDURE" subgroup="" icon="0" child="0" autoexp="0" matchcase="0" fendtobbeg="\&lt;FUNCTION\&gt;|\&lt;PROCEDURE\&gt;" bbegtobend="\&lt;IF\&gt;|\&lt;COMPONENT\&gt;|\&lt;LOOP\&gt;|\&lt;CASE\&gt;|\&lt;BEGIN\&gt;">
+            <Rules regexbeg="procedure\s+" regexfunc='[\w_&quot;\+-\*/]+' regexend="\s*\([\w_,;:\s\(\)]*\)" bodybegin="\&lt;BEGIN\&gt;" bodyend="\&lt;END\&gt;.*;" sep="" />
+            <Rules regexbeg="procedure\s+" regexfunc='[\w_&quot;\+-\*/]+' regexend="" bodybegin="\&lt;BEGIN\&gt;" bodyend="\&lt;END\&gt;.*;" sep="" />
+        </Group>
+    </Language>
+    <Language name="SQL" imagelistpath="">
+        <CommList param1="--" param2="" />
+        <CommList param1="/\*" param2="\*/" />
+        <Group name="FUNCTION" subgroup="" icon="0" child="0" autoexp="0" matchcase="0" fendtobbeg="" bbegtobend="">
+            <Rules regexbeg="^\s*create\s+function\s+" regexfunc="[\w_]+[\.\w_]*" regexend="\s*\(.*\)" bodybegin="\&lt;AS\&gt;" bodyend="\&lt;GO\&gt;" sep=";" />
+            <Rules regexbeg="^\s*function\s+" regexfunc="[\w_]+[\.\w_]*" regexend="\s*\(.*\)" bodybegin="\&lt;IS\&gt;" bodyend="\&lt;END\&gt;" sep=";" />
+        </Group>
+        <Group name="PROCEDURE" subgroup="" icon="0" child="0" autoexp="0" matchcase="0" fendtobbeg="" bbegtobend="">
+            <Rules regexbeg="\s*create\s+procedure\s+" regexfunc="[\w_]+[\.\w_]*" regexend="" bodybegin="\&lt;AS\&gt;" bodyend="\&lt;GO\&gt;" sep=";" />
+            <Rules regexbeg="^\s*proc[edur]\s+" regexfunc="[\w_]+[\.\w_]*" regexend="\s*\(.*\)" bodybegin="\&lt;IS\&gt;" bodyend="\&lt;END\&gt;" sep=";" />
+        </Group>
+    </Language>
+    <Language name="VB" imagelistpath="">
+        <Group name="FUNCTION" subgroup="" icon="0" child="0" autoexp="0" matchcase="0" fendtobbeg="" bbegtobend="">
+            <Rules regexbeg="function\s+" regexfunc="[\w_]+" regexend="\s*\(.*\)" bodybegin="" bodyend="\&lt;end\s+function\&gt;" sep="" />
+            <Rules regexbeg="function\s+" regexfunc="[\w_]+" regexend="" bodybegin="" bodyend="\&lt;end\s+function\&gt;" sep="" />
+        </Group>
+        <Group name="SUBROUTINE" subgroup="" icon="0" child="0" autoexp="0" matchcase="0" fendtobbeg="" bbegtobend="">
+            <Rules regexbeg="sub\s+" regexfunc="[\w_]+" regexend="\s*\(.*\)" bodybegin="" bodyend="\&lt;end\s+sub\&gt;" sep="" />
+            <Rules regexbeg="sub\s+" regexfunc="[\w_]+" regexend="" bodybegin="" bodyend="\&lt;end\s+sub\&gt;" sep="" />
+        </Group>
+    </Language>
+    <Language name="Assembler" imagelistpath="">
+        <CommList param1=";" param2="" />
+        <Group name="LABEL" subgroup="" icon="0" child="0" autoexp="0" matchcase="1" fendtobbeg="" bbegtobend="">
+            <Rules regexbeg="^" regexfunc="[\w_]+" regexend="\s*:.*" bodybegin="" bodyend="$" sep="" />
+        </Group>
+    </Language>
+    <Language name="Batch" imagelistpath="">
+        <CommList param1="::" param2="" />
+        <Group name="LABEL" subgroup="" icon="0" child="0" autoexp="0" matchcase="1" fendtobbeg="" bbegtobend="">
+            <Rules regexbeg="^\s*:" regexfunc="[\w_]+" regexend="$" bodybegin="" bodyend="" sep="" />
+        </Group>
+    </Language>
+    <Language name="Shell" imagelistpath="">
+        <CommList param1="#" param2="" />
+        <Group name="FUNCTION" subgroup="" icon="0" child="0" autoexp="0" matchcase="1" fendtobbeg="" bbegtobend="\{">
+            <Rules regexbeg="^\s*function\s+" regexfunc="[\w_]+" regexend="\s+[\(\)\s]*" bodybegin="\{" bodyend="\}" sep="" />
+            <Rules regexbeg="^\s*" regexfunc="[\w_]+" regexend="\s+\(\s*\)" bodybegin="\{" bodyend="\}" sep="" />
+        </Group>
+    </Language>
+    <Language name="TCL" imagelistpath="">
+        <CommList param1="#" param2="" />
+        <CommList param1='&quot;' param2='&quot;' />
+        <Group name="PROCESS" subgroup="" icon="0" child="0" autoexp="0" matchcase="1" fendtobbeg="" bbegtobend="\{">
+            <Rules regexbeg="^\s*proc\s+" regexfunc="[\w_\-+&amp;|]+" regexend="\s+\{.*\}" bodybegin="\{" bodyend="\}" sep=":" />
+            <Rules regexbeg="^\s*proc\s+" regexfunc="[\w_\-+&amp;|]+" regexend='\s+[\w_\-+$&amp;=&apos;/&quot;\s]*' bodybegin="\{" bodyend="\}" sep=":" />
+            <Rules regexbeg="^\s*proc\s+[\w_\-+&amp;|]+\s*::\s*" regexfunc="[\w_\-+&amp;|]+" regexend="\s+\{.*\}" bodybegin="\{" bodyend="\}" sep=":" />
+            <Rules regexbeg="^\s*proc\s+[\w_\-+&amp;|]+\s*::\s*" regexfunc="[\w_\-+&amp;|]+" regexend='\s+[\w_\-+$&amp;=&apos;/&quot;\s]*' bodybegin="\{" bodyend="\}" sep=":" />
+        </Group>
+    </Language>
+    <Language name="MS INI file" imagelistpath="">
+        <CommList param1="\s*;" param2="" />
+        <CommList param1="#" param2="" />
+        <Group name="SECTION" subgroup="" icon="0" child="0" autoexp="0" matchcase="1" fendtobbeg="" bbegtobend="">
+            <Rules regexbeg='^[\s;]*[\[&quot;]+' regexfunc="[\w_.; \(\)-]+" regexend='[\]&quot;]+\s*' bodybegin="" bodyend="$" sep="" />
+        </Group>
+    </Language>
+    <Language name="Objective-C" imagelistpath="">
+        <CommList param1="//" param2="" />
+        <CommList param1="/\*" param2="\*/" />
+        <Group name="FUNCTION" subgroup="" icon="0" child="0" autoexp="0" matchcase="0" fendtobbeg="" bbegtobend="\{">
+            <Rules regexbeg="[\+-]\s*\(.*\)\s*" regexfunc="[\w_]+" regexend="[\s:]*" bodybegin="\{" bodyend="\}" sep="#;" />
+            <Rules regexbeg="[\+-]\s*" regexfunc="[\w_]+" regexend="[\s:]*" bodybegin="\{" bodyend="\}" sep="#;" />
+        </Group>
+    </Language>
+    <Language name="Pascal" imagelistpath="">
+        <CommList param1="//" param2="" />
+        <CommList param1="&apos;" param2="&apos;" />
+        <CommList param1="\{" param2="\}" />
+        <CommList param1="\(\*" param2="\*\)" />
+        <Group name="OBJECT" subgroup="" icon="0" child="0" autoexp="0" matchcase="0" fendtobbeg="" bbegtobend="">
+            <Rules regexbeg="^\s*" regexfunc="[\w_]+" regexend="\s*=\s*object\(.*\)" bodybegin="" bodyend="\&lt;end\&gt;" sep="" />
+        </Group>
+        <Group name="PROCEDURE" subgroup="" icon="0" child="0" autoexp="0" matchcase="0" fendtobbeg="" bbegtobend="\&lt;begin\&gt;">
+            <Rules regexbeg="procedure\s+" regexfunc="[\w_]*\.*[\w_]+" regexend="\s*.*;" bodybegin="\&lt;begin\&gt;" bodyend="\&lt;end\&gt;" sep="\&lt;end\&gt;" />
+        </Group>
+        <Group name="FUNCTION" subgroup="" icon="0" child="0" autoexp="0" matchcase="0" fendtobbeg="" bbegtobend="\&lt;begin\&gt;">
+            <Rules regexbeg="function\s+" regexfunc="[\w_]*\.*[\w_]+" regexend="\s*.*;" bodybegin="\&lt;begin\&gt;" bodyend="\&lt;end\&gt;" sep="\&lt;end\&gt;" />
+        </Group>
+        <Group name="CONSTRUCTOR" subgroup="" icon="0" child="0" autoexp="0" matchcase="0" fendtobbeg="" bbegtobend="\&lt;begin\&gt;">
+            <Rules regexbeg="constructor\s+" regexfunc="[\w_]*\.*[\w_]+" regexend="\s*.*;" bodybegin="\&lt;begin\&gt;" bodyend="\&lt;end\&gt;" sep="\&lt;end\&gt;" />
+        </Group>
+        <Group name="DESTRUCTOR" subgroup="" icon="0" child="0" autoexp="0" matchcase="0" fendtobbeg="" bbegtobend="\&lt;begin\&gt;">
+            <Rules regexbeg="destructor\s+" regexfunc="[\w_]*\.*[\w_]+" regexend="\s*.*;" bodybegin="\&lt;begin\&gt;" bodyend="\&lt;end\&gt;" sep="\&lt;end\&gt;" />
+        </Group>
+        <Group name="VAR" subgroup="OBJECT" icon="0" child="0" autoexp="0" matchcase="0" fendtobbeg="" bbegtobend="">
+            <Rules regexbeg="\s*" regexfunc="[\w_]+\s*:\s*[\w\[\]_]+" regexend="\s*;" bodybegin="" bodyend="$" sep="" />
+        </Group>
+    </Language>
+    <Language name="Oberon-2" imagelistpath="">
+        <CommList param1="--" param2="" />
+        <Group name="PROCEDURE" subgroup="" icon="0" child="0" autoexp="0" matchcase="1" fendtobbeg="" bbegtobend="\&lt;FOR\&gt;|\&lt;IF\&gt;|\&lt;WHILE\&gt;|\&lt;CASE\&gt;|\&lt;WITH\&gt;|\&lt;LOOP\&gt;">
+            <Rules regexbeg="^[ \t]*PROCEDURE[ \t]*" regexfunc="[a-zA-Z0-9_():,;*\.\t \[\]&apos;]+" regexend="" bodybegin="\&lt;BEGIN\&gt;" bodyend="\&lt;END\&gt;" sep="" />
+        </Group>
+    </Language>
+    <Language name="User Defined" imagelistpath="">
+        <CommList param1="(*" param2="*)" />
+        <CommList param1="--" param2="" />
+        <Group name="Oberon-2" subgroup="" icon="0" child="0" autoexp="0" matchcase="1" fendtobbeg="" bbegtobend="\&lt;FOR\&gt;|\&lt;IF\&gt;|\&lt;WHILE\&gt;|\&lt;CASE\&gt;|\&lt;WITH\&gt;|\&lt;LOOP\&gt;">
+            <Rules regexbeg="^[ \t]*PROCEDURE[ \t^\^]*" regexfunc="[a-zA-Z0-9_():,;*\.\t \[\]&apos;]+" regexend="" bodybegin="BEGIN" bodyend="END" sep="" />
+        </Group>
+    </Language>
+</FunctionList>

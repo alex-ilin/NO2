@@ -1,38 +1,78 @@
-Notepad++ v4.8 fixed bugs and added features (from v4.7.5) :
+Notepad++ v5.6.4 new features and fixed bugs (from v5.6.3) :
 
-1.  Enhance Shortcut Mapper - all the commands (including plugins commands) can be assigned to a shortcut, even for the unmapped ones.
-2.  Upgrade Scintilla from v1.73 to v1.75
-3.  Add multi-line and vertical capacity for tab bar.
-4.  Add launch "as notepad" style feature (detection of asNotepad.xml, then launch notepad++ with -multiInst -nosession -notabbar options).
-5.  Add detection mouse wheel on the different view feature : User can scroll edit view when mouse on it, it's not necessary to set edit view as current view to scroll it.
-6.  Add clicking middle mouse button click to set current view feature : make clicked edit view be focused, but the cursor position does not change.
-7.  Add mouse wheel horizontal scroll feature (vista only).
-8.  Add mouse browsing (forward/back for switching to next/previous document) feature.
-9.  Make orange indicator on the top of tab lighter when the view loss the focus. 
-10. Add new look and feel of Docking container.
-11. Fix word-completion crash bug while the word to complete exceeds 256 characters.
-12. Fix full screen mode bug : can not switch applications by using Alt+TAB in full screen mode.
-13. Fix Preference crash bug.
-14. Add the utf8->ansi / ansi->utf8 conversion feature.
-15. Add Go to offset feature (in Go To Line dialog).
-16. Fix folding bugs while deleting the begin/end folding keywords.
-17. Fix position restored bug : Wrap position is restored correctly while switching back document.
-18. Fix locking current directory behaviour : Restore Notepad++ directory as working directory with no open files.
-19. Fix the multi-line tab height display problem while adding/removing the document.
-20. Enhance the auto-completion feature : user can define the number of characters to trigger auto-completion popup window.
-21. Change the horizontal scroll behaviour from dynamic one to static one.
-22. Fix the bug that cannot save file(s) if application closed while minimized.
+1.  Add feature of conversion from a localization encoding to UNICODE.
+2.  Fix status bar display bug that xml/html utf8 indicator makes status bar display ANSI instead of ANSI as UTF-8.
 
 
+Notepad++ v5.6.3 new features and fixed bugs (from v5.6.2) :
 
-Included plugins :
+1.  Add restore button in fullscreen and postIt mode.
+2.  Fix auto-updater bug.
 
-1. TexFX v0.24a
-2. NppExec v0.2 RC3.2
-3. Spell Checker v1.3.1
-4. Explorer plugin v1.7.1
-5. Hex editor v0.84
-6. Base64 encoder/decoder v1.2
-7. FTP_synchronize v0.9.6
-8. NppExport v0.2.7
-9. Compare plugin v1.5.1
+
+Notepad++ v5.6.2 new features and fixed bugs (from v5.6.1) :
+
+1.  Fix the Unicode localization file display problem.
+2.  Update templat localization file (english.xml) to v5.6.1.
+3.  Fix tag highlighting bug while disabling indent guide lines.
+4.  Fix the translated sub menu entries applying on the menu item.
+5.  Display more information while catching of plugins crash.
+
+
+Notepad++ v5.6.1 new features and fixed bugs (from v5.6) :
+
+1.  Fix brace highlighting breaking issue and related performance problem.
+2.  Add new encodings in the shortcuts map.
+3.  Remove annoying encoding issue warning dialogs.
+4.  Enhance Html encoding auto-detection.
+5.  Fix case-insensitive searching bug for non-ascii characters (for example some characters in French and Cyrillic letters).
+6.  Add find result commands in the menu.
+7.  Add DOS CodePage : CP437, CP737, CP850, CP852, CP855, CP857, CP858, CP860, CP861, CP863, CP865, CP866 and CP869.
+8.  Fix localization combo box unselected in preference dialog bug after startup (when a localization file is in use).
+
+
+Notepad++ v5.6 new features and fixed bugs (from v5.5.1) :
+
+1.  Add languages encoding - Chinese traditional (BIG5), Chinese Simplified (GB2312), Japanese (Shift JIS), Korean (EUC), Thai (TIS-620), Hebrew (iso-8859-8), Hebrew (1255), Central European (1250), Cyrillic (1251), Cyrillic (KOI8-U), Cyrillic (KOI8-R), Cyrillic (Mac), Western European(1252), Greek (1253), Turkish(1254), Arabic (1256), Baltic (1257), Vietnamese (1258), ISO_8859-1 to ISO_8859-16 and a lot of more.
+2.  Add auto-detection of HTML and XML files encodings.
+3.  Add COBOL, D, Gui4Cli, PowerShell and R language support.
+4.  Add Marker Jumper feature (Jump down/up : Ctrl+Num/Ctrl+Shift+Num).
+5.  Add indent guide line highlighting for html/xml tags.
+6.  Add system tray context menu and new command argument "-systemtray".
+7.  Fix Unicode to ANSI encoding bug.
+8.  Fix last recent file list menu items localization encoding bug.
+9.  Fix last recent file number goes to zero issue.
+10. Add new command argument "--help".
+11. Fix Calltip hint bug and add a new capacity in it.
+12. Add the ability to add the second keyword group for user in both LISP and Scheme languages.
+13. Fix the wrap symbol display problem.
+14. Add SQL ESC symbol '\'.
+15. Fix column editor insert number bug in virtual space mode.
+16. Fix status bar displaying "-2 char" issue for a empty document.
+17. Fix installation of NppShell64 failed issue in installer.
+
+
+Included plugins (Unicode):
+
+1.  TextFX v0.26
+2.  NppExec v0.3.2
+3.  Spell Checker v1.3.3
+4.  MIME Tools v1.6
+5.  NppExport v0.2.8
+6.  NppNetNote v0.1
+7.  Compare Plugin 1.5.5
+8.  Plugin Manager 0.9.3.0
+9.  Light Explorer v2.0
+
+Included plugins (ANSI):
+
+1.  TextFX v0.25
+2.  NppExec v0.3.2
+3.  Spell Checker v1.3.3
+4.  MIME Tools v1.6
+5.  NppExport v0.2.8
+6.  Light Explorer v1.6
+7.  NppNetNote v0.1
+8.  Compare Plugin 1.5.5
+9.  Plugin Manager 0.9.3.0
+

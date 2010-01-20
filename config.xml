@@ -39,7 +39,7 @@
 					... (see source file)
 		-->
         <GUIConfig name="NewDocDefaultSettings" format="0" encoding="0" lang="0" />
-        <GUIConfig name="langsExcluded" gr0="62" gr1="3" gr2="159" gr3="251" gr4="249" gr5="127" gr6="3" gr7="0" />
+        <GUIConfig name="langsExcluded" gr0="62" gr1="3" gr2="159" gr3="251" gr4="249" gr5="127" gr6="3" gr7="0" langMenuCompact="no"/>
         <!--
 		printOption is print colour setting, the following values are possible :
 			0 : WYSIWYG

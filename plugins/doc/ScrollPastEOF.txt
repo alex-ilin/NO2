@@ -1,0 +1,9 @@
+ScrollPastEOF v.1.0 - freeware open-source plugin for Notepad++.
+
+This plugin simply configures the Scintilla components on startup to allow scrolling up to one page down past the end of file. Currently (as of Notepad++ 5.6.2) there is no GUI setting to enable this feature. It may be added at a later time, but if you are using an older version, you may still want to use this plugin.
+
+Installation. To use this plugin you have to copy the ScrollPastEOF.dll for ANSI version or ScrollPastEOFUni.dll file for Unicode version into Notepad++\plugins\ folder. To disable the plugin either delete/remove the file from the plugins folder or change the .dll extension (e.g. to .bak).
+
+Created by Alexander Iljin (Amadeus IT Solutions) on June 17, 2008. You may contact me via e-mail: AlexIljin@users.SourceForge.net
+The preferred method for feedback is the Notepad++ forum. Post your feature requests and bug reports here:
+http://sourceforge.net/forum/forum.php?thread_id=2084924&forum_id=482781

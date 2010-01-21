@@ -1,0 +1,56 @@
+Oberon2Lexer v0.3 - freeware open-source plugin for Notepad++.
+
+INTRODUCTION
+
+This Notepad++ plugin provides a Scintilla Lexer for XDS Oberon-2 programming
+language.
+
+INSTALLATION AND SETUP
+
+To use this plugin you have to copy two files. If you are using the ANSI
+version of Notepad++, you should copy:
+- file 1: Oberon2Lexer.dll to Notepad++\plugins\;
+- file 2: Config\Oberon2Lexer.xml to Notepad++\plugins\Config\.
+If you are using the Unicode version of Notepad++, you should copy:
+- file 1: Oberon2LexerU.dll to Notepad++\plugins\;
+- file 2: Config\Oberon2LexerU.xml to Notepad++\plugins\Config\.
+
+Both target folders are to be found either in "Program Files" or in
+"Application Data" of your current user, that depends on whether you installed
+Notepad++ in the Portable mode or not. (Hint: to determine whether Notepad++
+is installed in Portable mode, check for the existence of "doLocalConf.xml"
+file in the folder next to Notepad++.exe. If the file is present, Portable
+mode is in effect, otherwise it is not.) If you are still not sure what to do,
+just copy the files to both "Program Files" and "Application Data".
+
+If the Oberon2Lexer plugin is installed, you will see the "Oberon-2" item in
+the "Languages" menu, and "Oberon-2 Lexer" submenu in the "Plugins" menu.
+
+To change the highlighting styles (colours, fonts, etc.) use the standard
+"Settings - Styler Configurator..." dialog. Your settings will be stored in
+Notepad++\plugins\Config\Oberon2Lexer[U].xml. When a file is being handled by
+the plugin, you should see the text "Oberon-2 source file" in the status bar.
+
+The following styles are available:
+Unsafe - currently only the keyword SYSTEM is highlighted with this style;
+Flow breaker - the keywords EXIT, RETURN and HALT;
+Keyword - all the predefined identifiers I could remember, except the ones
+  mentioned in the "Unsafe" and "Flow breaker" styles;
+Number - REAL ("E" and "D" notations supported) and INTEGER constants,
+  including the hexadecimal ones with the "H" suffix;
+String - 'quoted', "double-quoted" string constants and the hexadecimal
+  character constants with the "X" suffix;
+Comment - (* block comments (* with arbitrary nesting level *) *) and -- wing
+  comments are supported;
+Compiler option - <* the XDS syntax (* even with comments inside *) *>;
+Error - this style is used for unterminated strings, comments, compiler
+  pragmas, invalid number constants, invalid characters (such as %, @, $),
+  etc.;
+Default - everything else, i.e. normal identifiers, valid symbols and
+   whitespace.
+
+AUTHOR
+
+The Oberon2Lexer plugin was created by Alexander Iljin (Amadeus IT Solutions)
+on November - December 2009.
+You may contact me via e-mail: AlexIljin@users.SourceForge.net

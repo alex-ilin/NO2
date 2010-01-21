@@ -1,0 +1,24 @@
+Oberon2Lexer changelog.
+
+Version 0.3, 17 Dec 2009.
+- Styling at EOF works wihtout a hitch.
+- Implemented partial styling to improve performance.
+- Improved performance by using the Scintilla direct access functions.
+- Used XDS Profiler to improve performance of the scanner itself.
+- Created Unicode version of the plugin.
+
+Version 0.2, 05 Dec 2009.
+User-visible changes:
+- REAL constants are now fully supported in all forms.
+- Number parsing became more sophisticated, with more corner cases handled.
+- Added support for wing comments inside compiler pragmas.
+- Comments inside pragmas are now highlighted as pragma, not comment.
+Introduced drawbacks:
+- The last few tokens of a file are not styled (e.g. an unclosed comment
+  lasting to the EOF is considered one big token).
+- A file gets fully restyled on every pass (i.e. after every keypress).
+Internal changes:
+- Major reimplementation, finer modularization.
+
+Version 0.1, 15 Nov 2009.
+Initial internal version.

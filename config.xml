@@ -2,7 +2,7 @@
 <NotepadPlus>
     <GUIConfigs>
         <!-- 3 status : "large", "small" or "hide"-->
-        <GUIConfig name="ToolBar">standard</GUIConfig>
+        <GUIConfig name="ToolBar" visible="yes">standard</GUIConfig>
         <!-- 2 status : "show" or "hide"-->
         <GUIConfig name="StatusBar">show</GUIConfig>
         <!-- For all attributs, 2 status : "yes" or "no"-->
@@ -38,8 +38,8 @@
 					1 -> L_PHP
 					... (see source file)
 		-->
-        <GUIConfig name="NewDocDefaultSettings" format="0" encoding="0" lang="0" />
-        <GUIConfig name="langsExcluded" gr0="62" gr1="3" gr2="159" gr3="251" gr4="249" gr5="127" gr6="3" gr7="0" langMenuCompact="no"/>
+        <GUIConfig name="NewDocDefaultSettings" format="0" encoding="0" lang="0" openAnsiAsUTF8="no" />
+        <GUIConfig name="langsExcluded" gr0="62" gr1="3" gr2="159" gr3="251" gr4="249" gr5="127" gr6="3" gr7="0" langMenuCompact="no" />
         <!--
 		printOption is print colour setting, the following values are possible :
 			0 : WYSIWYG
@@ -73,9 +73,17 @@
         <GUIConfig name="MRU">yes</GUIConfig>
         <GUIConfig name="URL">0</GUIConfig>
         <GUIConfig name="globalOverride" fg="no" bg="no" font="yes" fontSize="yes" bold="no" italic="no" underline="no" />
-        <GUIConfig name="auto-completion" autoCAction="1" triggerFromNbChar="1" />
-        <GUIConfig name="noUpdate">no</GUIConfig>
+        <GUIConfig name="auto-completion" autoCAction="1" triggerFromNbChar="1" funcParams="no" />
+        <GUIConfig name="noUpdate" intervalDays="15" nextUpdateDate="20080426">no</GUIConfig>
         <GUIConfig name="sessionExt"></GUIConfig>
+        <GUIConfig name="SmartHighLight">no</GUIConfig>
+        <GUIConfig name="TagsMatchHighLight" TagAttrHighLight="no" HighLightNonHtmlZone="no">no</GUIConfig>
+        <GUIConfig name="MenuBar">show</GUIConfig>
+        <GUIConfig name="Caret" width="1" blinkRate="250" />
+        <GUIConfig name="ScintillaGlobalSettings" enableMultiSelection="yes" />
+        <GUIConfig name="openSaveDir" value="0" defaultDirPath="" />
+        <GUIConfig name="titleBar" short="no" />
+        <GUIConfig name="stylerTheme" path="D:\Program Files\Utils\Notepad++.git\stylers.xml" />
         <GUIConfig name="DockingManager" leftWidth="249" rightWidth="197" topHeight="200" bottomHeight="220">
             <PluginDlg pluginName="FunctionList.dll" id="0" curr="0" prev="4" isVisible="yes" />
             <PluginDlg pluginName="Explorer.dll" id="0" curr="1" prev="-1" isVisible="yes" />
@@ -86,6 +94,8 @@
         </GUIConfig>
     </GUIConfigs>
     <!-- The History of opened files list -->
-    <History nbMaxFile="15">
-    </History>
+    <FindHistory nbMaxFindHistoryPath="10" nbMaxFindHistoryFilter="10" nbMaxFindHistoryFind="10" nbMaxFindHistoryReplace="10" matchWord="no" matchCase="no" wrap="yes" directionDown="yes" fifRecuisive="yes" fifInHiddenFolder="no" dlgAlwaysVisible="no" fifFilterFollowsDoc="no" fifFolderFollowsDoc="yes" searchMode="0" transparencyMode="1" transparency="150">
+        <Filter name="*.ob2" />
+    </FindHistory>
+    <History nbMaxFile="15" />
 </NotepadPlus>

@@ -26,6 +26,7 @@
     </UserDefinedCommands>
     <PluginCommands>
         <PluginCommand moduleName="Obide.dll" internalID="4" Ctrl="yes" Alt="no" Shift="no" Key="189" />
+        <PluginCommand moduleName="QuickText.dll" internalID="0" Ctrl="yes" Alt="no" Shift="no" Key="13" />
     </PluginCommands>
     <ScintillaKeys>
         <ScintKey ScintID="2177" menuCmdID="42001" Ctrl="yes" Alt="no" Shift="no" Key="88" />

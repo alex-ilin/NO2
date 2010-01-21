@@ -17,7 +17,7 @@
 */
 
 Name: QuickText
-Version: 0.2
+Version: 0.2.1
 Link: http://sourceforge.net/projects/quicktext/
 Author: João Moreno <alph.pt@gmail.com>
 
@@ -48,53 +48,66 @@ To make you're own tags:
 		- \$ for writing actual '$'
 		- \n break line.
 
-Or just use the Options GUI. (v0.2) :)
+Or just use the Options GUI. (v0.2.1) :)
 
 EXAMPLE
 
  *** (8 is the Language Code for HTML)
 
-[8]  
+[15]  
 link=<a href="$">$</a>
 
 LANGUAGE CODES
 
-00 TXT
-01 PHP
-02 C
-03 CPP
-04 CS
-05 OBJC
-06 JAVA
-07 RC
-08 HTML
-09 XML
-10 MAKEFILE
-11 PASCAL
-12 BATCH
-13 INI
-14 NFO
-15 USER
-16 ASP
-17 SQL
-18 VB
-19 JS
-20 CSS
-21 PERL
-22 PYTHON
-23 LUA
-24 TEX
-25 FORTRAN
-26 BASH
-27 FLASH
-28 NSIS
-29 TCL
-30 LISP
-31 SCHEME
-32 ASM
-33 DIFF
-34 PROPS
-35 PS
-36 RUBY
-37 SMALLTALK
-38 VHDL
+0	TEXT
+1	PHP
+2	C
+3	CPP
+4	CS
+5	OBJC
+6	JAVA
+7	RC
+8	HTML
+9	XML
+10	MAKEFILE
+11	PASCAL
+12	BATCH
+13	INI
+14	ASCII
+15	USER
+16	ASP
+17	SQL
+18	VB
+19	JS
+20	CSS
+21	PERL
+22	PYTHON
+23	LUA
+24	TEX
+25	FORTRAN
+26	SH
+27	FLASH
+28	NSIS
+29	TCL
+30	LISP
+31	SCHEME
+32	ASM
+33	DIFF
+34	PROPS
+35	PS
+36	RUBY
+37	SMALLTALK
+38	VHDL
+39	KIX
+40	AU3
+41	CAML
+42	ADA
+43	VERILOG
+44	MATLAB
+45	HASKELL
+46	INNO
+47	SEARCH_RESULT
+48	CMAKE
+49	YAML
+50	EXTERNAL
+51	GLOBAL

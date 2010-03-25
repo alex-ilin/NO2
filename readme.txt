@@ -1,6 +1,6 @@
 This is "NO2" - Notepad++ assembly for Oberon-2 development.
 
-This package is based on Notepad++ 4.8.0, the open-source text editor.
+This package is based on Notepad++ 5.6.8, the open-source text editor.
 Author: Alexander Iljin <ajsoft@yandex.ru>
 Version: 0.1
 

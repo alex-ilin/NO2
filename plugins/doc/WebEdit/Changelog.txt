@@ -1,0 +1,69 @@
+WebEdit changelog.
+
+Version 2.1, 31.03.2010.
+- Added "\c" escape sequence to paste clipboard contents when replacing a tag.
+- Added "\i" escape sequence to increase indentation level when replacing a tag.
+- Removed error message box from the "Edit Config" command.
+- Fixed: "\n" now indents by copying only the empty part of the first line, not the whole part up to the tag.
+- Fixed invalid caret placement after replacing a tag when you move the caret with up and down keys (it jumped to a different column on adjacent lines).
+
+Version 2.0, 29.03.2010.
+- Added "Replace Tag" menu item.
+- Added version number to the About box title.
+
+Version 1.4, 23.02.2010.
+- Added "Edit Config" menu item.
+- Updated documentation, clarified wording.
+- Scintilla "direct access" function is used for a tiny bit of speed improvement.
+
+Version 1.3.3, 22.05.2009.
+- Added a set of bitmaps and a few new commands published by acialk@users.sourceforge.net.
+- Fixed a couple of crash bugs caused by invalid slot numbers for the toolbar buttons.
+
+Version 1.3.2.3, 14.05.2009.
+- Better installation instructions in the WebEdit.txt documentation.
+- Source code is moved to the "Source" subfolder of the distribution package.
+
+Version 1.3.2.2, 23.04.2009.
+- Included a sample bitmap in the distribution package.
+
+Version 1.3.2.1, 02.04.2009.
+- Populated the WebEdit.ini with some HTML tags (based on the sample set provided by Jonas Flint (jive) http://www.zero1productions.com).
+- The sample WebEdit.ini is moved to Config subfolder of the distribution package for easier installation.
+- Documentation update: added a note about the "Small standard icons".
+
+Version 1.3.2, 27.03.2009.
+- Minor internal tweaks.
+- Added Unicode version.
+
+Version 1.3.1, 11.07.2008.
+- Tab character does not terminate a line in the ini-file anymore.
+
+Version 1.3, 09.07.2008.
+- The plugin can be configured to add its commands to the toolbar.
+
+Version 1.2, 18.06.2008.
+- New feature for Notepad++ 5.0 and later: the Shortcut Mapper will show the
+  actual menu item names instead of dummy "WebEdit XX", e.g. "WebEdit -
+  Paragraph Tag".
+  Note: to update strings displayed by the Shortcut Mapper you have to restart
+  Notepad++. If you have used "Load Config" to update the plugin configuration,
+  the shortcut table may be out of date.
+
+Version 1.1, 07.06.2008.
+- The dummy menu entries are renamed from "not used" to "WebEdit Slot XX", where
+  XX is the number of the slot. This helps greatly to find the items in the Shortcut
+  Mapper and differentiate between them.
+- The double slash is now recognized as an escape sequence in the ini-file.
+- Added version information resource to the DLL.
+
+Version 1.0, 18.03.2008.
+- Plugin renamed to WebEdit (was NppWebEdit) to simplify navigation in the "Plugins" menu.
+- Added WebEdit.txt file with the plugin description.
+- The plugin now has 15 menu slots for user-defined functions read from WebEdit.ini.
+
+Version 0.2, 08.03.2008.
+- Insertion of a pair of tags is undone as a single action.
+
+Version 0.1, 06.03.2008.
+Initial release.

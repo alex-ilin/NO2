@@ -15,11 +15,11 @@ Feature highlights:
 - NppExec allows one to execute console commands, preconfigured to highlight
   XC error messages (double click on the message opens the file/position of
   the error);
-- QuickText plugin allows you to expand abbreviations to make full language
+- WebEdit plugin allows you to expand abbreviations to make full language
   constructs in a few keystrokes, e.g. type "p" and press Ctrl+Enter to
-  replace "p" with a full PROCEDURE template with caret placed at the place to
-  enter name the name for the new procedure. Press Ctrl+Enter again to move
-  caret to the next predefined position in the template;
+  replace "p" with a full PROCEDURE template with clipboard contents pasted as 
+  the procedure name and with caret placed in the new procedure body, properly
+  indented;
 - Oberon2Lexer plugin provides support for syntax highlighting;
 - Obide plugin supports:
   * code tooltips (e.g. parameter list for a procedure, value for a constant,
@@ -40,8 +40,8 @@ Component versions:
 - Oberon2Lexer v0.3;
 - Obide v2.2.1;
 - Plugin Manager 0.9.3.1;
-- QuickText v0.2.1;
-- Scintilla v2.0.1.
+- Scintilla v2.0.1;
+- WebEdit v2.1.
 
 
 Links:

@@ -1,0 +1,64 @@
+Obide changelog.
+
+Version 2.3.1, 07.04.2010.
+- Fixed: changing Global.mouseHintDelay in the ini-file had no effect.
+- Fixed: Code Hint will be hidden after keeping mouse cursor for
+  Global.mouseHintDelay milliseconds away from an identifier.
+
+Version 2.3, 02.04.2010.
+- Added Global.autoCMaxHeight option to set the autocompletion box maximum
+  height. Default value is 32.
+- The height of the autocompletion box will not exceed half the number of
+  lines visible on screen.
+- Added: on selecting an item from autocompletion list the rest of the current
+  identifier will be replaced with the selected text.
+- Changed: don't close the autocompletion list unless the identifier being
+  completed was fully erased.
+- Typing the following character now confirms the selection from the
+  autocompletion list (previously it was only confirmed by pressing the Enter
+  key): ([{}]).:;,+-*/|<>=#^& Tab Space Enter. These are all characters
+  allowed in the Oberon-2 language after an identifier.
+- Added: code hints are now displayed after holding the mouse cursor over an
+  identifier for half a second. See Global.mouseHintDelay option.
+
+Version 2.2.1, 26.03.2010.
+- Fixed: end of procedure wasn't detected in some cases.
+
+Version 2.2, 20.03.2010.
+- Created Unicode build of the plugin.
+- Added code hint for modules (alias and full file/path to the module).
+- Module lookup paths are now read from Obide.ini, if any.
+- "Go to Definition" menu item is renamed "Go to Declaration".
+- When trying to "Go to Declaration" of a module that can't be found, the
+  appropriate hint message is displayed. Fixed position of the hint, added
+  lookup paths to the message.
+- Fixed invalid Version Information format.
+- Added version number to the About box title.
+
+Version 2.1, 05.11.2009.
+- Added support for direct language specification according to
+   "xc.hlp\Direct language specification".
+
+Version 2.0.1, 06.12.2008.
+- Fixed: attempt to parse a nameless parameterless procedure (technically, a
+   syntax error) crashed the plugin.
+- Fixed: procedure types with a calling convention specification were parsed
+   incorrectly.
+
+Version 2.0, 03.11.2008.
+- Added compilation by executing "make" in the current file's folder.
+- New caret policy: center of screen.
+- Scrolling past EOF is enabled on startup.
+- Added full support for local types, variables, constants and procedures.
+- More sophisticated type system: all types are now supported.
+- Added support for type-bound procedures.
+- Added handling of forward declarations.
+- Modules will not be reparsed on every request, but only if their modification
+   date/time changes.
+- Various fixes.
+
+Version 1.0, 03.06.2008.
+First version.
+
+Version 0.0, 30.03.2008.
+Started working on the plugin.

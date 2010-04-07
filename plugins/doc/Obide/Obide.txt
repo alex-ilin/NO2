@@ -1,0 +1,91 @@
+The Obide (Oberon IDE) plugin for Notepad++. Copyright (c) Alexander Iljin,
+2008-2010.
+
+DESCRIPTION
+
+Obide provides IDE capabilities for XDS Oberon-2 developers in Notepad++:
+autocompletion, source navigation, code hints, etc.
+
+FEATURES
+
+Source code navigation.
+
+Place the caret at an identifier, then press Ctrl+9 to jump to the declaration
+of the identifier. If the identifier is an imported module name or alias, the
+corresponding file will be opened and/or activated in Notepad++. Press Ctrl+0
+to jump back to the previous caret position (this also restores selection).
+
+The following identifiers are currently supported as jump targets:
+- top-level, nested and type-bound procedures;
+- global and local constants;
+- global and local variables, including procedure parameters;
+- global and local types and record fields;
+- imported module names and aliases.
+
+Source code information.
+
+To get some additional information about an identifier, place the mouse cursor
+over the identifier and wait for half a second or place the caret at the
+identifier and press Ctrl+Alt+Space. If there is any information available,
+you will see a popup hint window. The following kinds of information are
+provided:
+- for modules: full file name;
+- for constants: value, as declared;
+- for variables: type;
+- for types: type declaration;
+- for procedures: parameter list and return value.
+"As declared" means that no calculations or translations are performed. E.g.
+if a constant X is declared as "CONST X = 5+4;", you will see "5+4" in the
+hint, not "9".
+
+Autocompletion.
+
+The autocompletion allows you to select an identifier from a list of
+identifiers, available in a given context. To make use of the feature, start
+typing and press Ctrl+Space. An alphabetically sorted list of identifiers is
+popped up for you to choose from. The following items are included:
+- global and local constants;
+- global and local types;
+- global and local variables, including procedure parameters;
+- top-level and local procedures (excluding type-bound).
+If you are calling the autocompletion list for a qualified identifier you will
+see the list of available subidentifiers with full respect to the visibility
+rules and type extension. The left part of the qualified identifier in
+question must not contain any procedure calls or type guards.
+
+Compiler integration.
+
+Currently Obide supports very basic compiler integration. Press Ctrl+1 to
+compile the current project. This is accomplished by executing the "make"
+program in the folder of the currently active file. The output of the program
+is analyzed and the XDS compiler error messages are searched for. If there is
+an error message found, the offending module is opened and/or activated, the
+caret is placed at the error position and the error message is displayed in a
+popup hint window. You may press Ctrl+0 to jump back to the previous position.
+If no XDS error messages were found, the "Compiled successfully" message is
+displayed to indicate that the compilation is finished. Note, this does not
+mean there were no other kinds of compilation problems. If something does not
+go as expected, you may still want to execute "make" manually in a console (or
+use the NppExec plugin).
+
+Press Ctrl+- to jump to the place of the last compiler error and show the
+error text without recompilation. Press Ctrl+0 to jump back.
+
+INSTALLATION
+
+Notepad++ ANSI version:
+To install the plugin simply copy the Obide.dll to the "plugins" subfolder of
+the Notepad++ installation folder. Copy Obide.ini to "plugins/Config".
+
+Notepad++ Unicode version:
+To install the plugin simply copy the ObideU.dll to the "plugins" subfolder of
+the Notepad++ installation folder. Copy Obide.ini to "plugins/Config".
+
+Alternatively, you can use the Plugin Manager plugin to install Obide.
+
+DISCLAIMER
+
+This project was started at "Amadeus IT Solutions" to create an IDE that would
+support our development process, tools and project structure. The plugin is
+not meant to be a general purpose tool, configurable for every possible use
+cases. It mostly meant to provide functions not found in other plugins.
